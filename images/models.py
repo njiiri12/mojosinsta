@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+import cloudinary
 
 
 # Create your models here.
@@ -22,10 +23,7 @@ class Profile(models.Model):
         profile = Profile.objects.filter(user__username__icontains=search_term)
         return profile
 
-    # @classmethod
-    # def edit_profile(cls,id,bio):
-    #     edited = Profile.objects.filter(id=id).update(bio = bio)
-    #     return edited
+    
 
 class Image(models.Model):
     posted_by = models.ForeignKey(User, null=True, on_delete=models.CASCADE)
