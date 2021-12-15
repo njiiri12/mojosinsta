@@ -60,6 +60,7 @@ INSTALLED_APPS = [
     'cloudinary',
     'tinymce',
     'images',
+    'six',
     'bootstrap4',
     'django.contrib.admin',
     'django.contrib.auth',
